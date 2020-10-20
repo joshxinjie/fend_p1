@@ -62,3 +62,22 @@
         width: 30px;
     }
 }
+
+@media (pointer:none), (pointer:coarse) {
+    #contact-text {
+        font-size: 50px;
+    }
+
+    #vertical-line {
+        height: 70px;
+    }
+
+    .contact-img-link {
+        height: 50px;
+        width: 50px;
+    }
+
+    #contact-text {
+        margin-top: 0;
+    }
+}
