@@ -6,7 +6,7 @@
 
 #footer-grid-container{
     display:grid;
-    grid-template-columns: 1fr 10px 1fr;
+    grid-template-columns: 1fr 1% 1fr;
     grid-template-rows: 100%;
     grid-template-areas:
     "contact-text vert-line contact-links";
@@ -70,6 +70,8 @@
 
     #vertical-line {
         height: 70px;
+        margin-right: 20px;
+        margin-right: 20px;
     }
 
     .contact-img-link {
