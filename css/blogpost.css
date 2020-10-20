@@ -1,0 +1,290 @@
+@import "menubar.css";
+@import "footer.css";
+
+#blog-grid-container{
+    display:grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50px 300px 75px 1fr 200px 100px;
+    grid-template-areas:
+    "menu"
+    "intro"
+    "author"
+    "text"
+    "next-story"
+    "footer";
+}
+
+@media (min-width: 1000px) {
+    #blog-grid-container{
+        display:grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 50px 700px 75px 1fr 200px 100px;
+        grid-template-areas:
+        "menu"
+        "intro"
+        "author"
+        "text"
+        "next-story"
+        "footer";
+    }
+}
+
+/* div.blog-intro > h1 {
+    color:white;
+    font-family: Permanent Marker;
+    font-size: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+} */
+
+.blog-title {
+    color:white;
+    font-family: Permanent Marker;
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 1000px) {
+    .blog-title {
+        font-size: 120px;
+    }
+}
+
+div.blog-intro {
+    position:relative;
+}
+
+div.blog-intro:before {
+    grid-area: intro;
+    content:'';
+    position:absolute;
+    background-image:url('https://images.unsplash.com/photo-1584701781638-d3f3b0ade216?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80');
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    filter: brightness(50%);
+    -webkit-filter:brightness(50%);
+    left:0;top:0;bottom:0;right:0; 
+    z-index:-1;
+}
+
+.author-info {
+    grid-area: author;
+    padding: 50px;
+}
+
+#author-grid-container {
+    display:grid;
+    grid-template-columns: 1fr 60px 240px 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "top-line top-line top-line top-line"
+    "author-left-space author-pic author-intro author-right-space"
+    "bottom-line bottom-line bottom-line bottom-line";
+}
+
+@media (min-width: 1000px) {
+    #author-grid-container{
+        display:grid;
+        grid-template-columns: 1fr 5% 45% 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+        "top-line top-line top-line top-line"
+        "author-left-space author-pic author-intro author-right-space"
+        "bottom-line bottom-line bottom-line bottom-line";
+    }
+}
+
+#author-pic {
+    grid-area: author-pic;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-top: 9px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.author-intro {
+    grid-area: author-intro;
+    /* margin: 0; */
+    padding: 0;
+    line-height: 1px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    font-family: Roboto;
+    font-size: 11px;
+}
+
+#author-name {
+    font-weight: bold;
+}
+
+#author-avatar {
+    font-style: italic;
+}
+
+#blog-text-grid-container {
+    display:grid;
+    grid-template-columns: 1fr 300px 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas:
+    "left-space text-1 right-space"
+    "left-space pic-1 right-space"
+    "left-space pic-cap-1 right-space"
+    "left-space text-2 right-space"
+    "left-space text-3 right-space"
+    "left-space text-4 right-space";
+}
+
+@media (min-width: 1000px) {
+    #blog-text-grid-container{
+        display:grid;
+        grid-template-columns: 1fr 50% 1fr;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas:
+        "left-space text-1 right-space"
+        "left-space pic-1 right-space"
+        "left-space pic-cap-1 right-space"
+        "left-space text-2 right-space"
+        "left-space text-3 right-space"
+        "left-space text-4 right-space";
+    }
+}
+
+.blog-text {
+    font-family: Roboto;
+    text-align: justify;
+}
+
+#blog-text-1 {
+    grid-area: text-1;
+    margin-top: 100px;
+}
+
+#blog-text-2 {
+    grid-area: text-2;
+    margin-top: 50px;
+}
+
+#blog-text-3 {
+    grid-area: text-3;
+    margin-top: 50px;
+}
+
+#blog-text-4 {
+    grid-area: text-4;
+    margin-top: 50px;
+}
+
+#blog-pic-1 {
+    grid-area: pic-1;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    height:200px;
+}
+
+#blog-pic-caption-1 {
+    grid-area: pic-cap-1;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.next-story {
+    grid-area: next-story;
+    margin-bottom: 30px;
+}
+
+#next-story-grid-container {
+    display:grid;
+    grid-template-columns: 1fr 200px 1fr;
+    grid-template-rows: 30% 1fr;
+    grid-template-areas:
+    "left-next-story-space next-story-intro right-next-story-space"
+    "left-next-story-space next-story-area-1 right-next-story-space";
+}
+
+@media (min-width: 1000px) {
+    #next-story-grid-container {
+        display:grid;
+        grid-template-columns: 1fr 600px 1fr;
+        grid-template-rows: 30% 1fr;
+        grid-template-areas:
+        "left-next-story-space next-story-intro right-next-story-space"
+        "left-next-story-space next-story-area-1 right-next-story-space";
+    }
+}
+
+#next-story-intro {
+    grid-area: next-story-intro;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 15px;
+    text-decoration: underline;
+}
+
+.next-story-1 {
+    grid-area: next-story-area-1;
+}
+
+.next-story-1:hover {
+    opacity: 0.6;
+}
+
+#next-story-pic-1 {
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 50px;
+    width: 50px;
+}
+
+#next-story-title-1 {
+    float: left;
+    font-family: Roboto;
+    font-weight: bold;
+    color: black;
+    font-size: 10px;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+@media (min-width: 600px) {
+    #blog-pic-1 {
+        height:300px;
+    }
+
+}
+
+@media (min-width: 1000px) {
+    #next-story-intro {
+        font-size: 25px;
+    }
+
+    #blog-pic-1 {
+        height:500px;
+    }
+
+    #next-story-pic-1 {
+        height: 75px;
+        width: 75px;
+    }
+
+    #next-story-title-1 {
+        margin-top: 40px;
+        font-size: 20px;
+    }
+
+    .author-intro {
+        font-size: 15px;
+    }
+}

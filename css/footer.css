@@ -1,0 +1,64 @@
+.footer{
+    grid-area: footer;
+    background-color: white;
+    margin-top: 20px;
+}
+
+#footer-grid-container{
+    display:grid;
+    grid-template-columns: 1fr 10px 1fr;
+    grid-template-rows: 100%;
+    grid-template-areas:
+    "contact-text vert-line contact-links";
+}
+
+#contact-text {
+    grid-area: contact-text;
+    font-family: Roboto;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: 40px;
+    margin-top: 15px;
+}
+
+#vertical-line {
+    grid-area: vert-line;
+    border-left: 2px solid black;
+    height: 50px;
+    position:absolute;
+    float: center;
+    left: 50%;
+}
+
+.contact-links {
+    grid-area: contact-links;
+    list-style-type: none;
+}
+
+.contact-img-link {
+    float: left;
+    height: 20px;
+    width: 20px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 0;
+}
+
+.contact-img-link:hover {
+	opacity: 0.4;
+}
+
+@media (min-width: 1000px) {
+    #contact-text {
+        font-size: 30px;
+    }
+
+    #vertical-line {
+        height: 60px;
+    }
+
+    .contact-img-link {
+        height: 30px;
+        width: 30px;
+    }
+}
